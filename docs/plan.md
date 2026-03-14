@@ -1,31 +1,25 @@
 # Plan
 
-Status: active
+Use this file for the current work horizon only. Remove stale tasks instead of accumulating history.
 
-This is a living execution document. Update it as the plan becomes clearer through conversation and implementation.
-Keep it short.
+## Objective
 
-## Current Objective
-- Define the current objective here.
+- Current objective:
 
-## Current Phase
-- Phase:
+## Active Spec
 
-## Active Task
-- Task:
-- Owner: agent + user conversation
-- Status: proposed
-
-## Task List
-- [ ] Task 1
-- [ ] Task 2
-- [ ] Task 3
+- Spec path:
+- If no spec is needed, record why:
 
 ## Next Step
-- Next concrete step:
 
-## Blockers
-- None yet.
+- Next concrete action:
 
-## Notes
-- Record only decisions that matter for execution.
+## Blockers or Risks
+
+- Blocking issue or major risk:
+- `None` if clear:
+
+## Notes for Execution
+
+- Only decisions that affect the next work unit:

@@ -1,120 +1,36 @@
 # AGENTS.md
 
-Purpose: operational instructions for coding agents working in this repository.
+## Repo Purpose
 
-This repository uses a conversation-first, spec-driven workflow.
-Project documents live under `docs/` and are created or refined through conversation
-with the user. Treat those documents as living artifacts, not boilerplate.
+This repository is a compact template for Codex-driven harness engineering projects.
+Use `docs/` as shared working memory that helps the user and Codex stay aligned.
 
-## Canonical document locations
+## Core Philosophy
 
-- `docs/product.md` — product intent, goals, non-goals, users, success criteria
-- `docs/engineering.md` — architecture, stack, constraints, interfaces, validation rules
-- `docs/plan.md` — current roadmap, active tasks, status, next steps
-- `docs/specs/*.md` — feature-level contracts and acceptance criteria
+- Keep each document focused on a single purpose.
+- Prefer current truth over history.
+- Use specs to drive non-trivial changes.
+- Prefer small, explicit edits over broad rewrites.
 
-Keep all project planning and design documents under `docs/`.
-Keep this file focused on agent behavior only.
+## Document Roles
 
-## Core operating rules
+- `docs/product.md` stores durable product intent only.
+- `docs/engineering.md` stores durable technical truth only.
+- `docs/plan.md` stores the current execution state only.
+- `docs/specs/*.md` store scoped working contracts for non-trivial changes.
+- Brief references across docs are fine, but keep the full version of a fact in one best-fit place.
 
-1. For non-trivial work, read `docs/plan.md` first.
-2. If there is an active feature spec, use it as the implementation contract.
-3. If the necessary docs do not exist or are clearly incomplete, create or update them
-   as part of the task.
-4. Major product or architecture decisions must come from conversation with the user.
-   Do not silently invent them.
-5. Prefer small, explicit edits over broad rewrites.
-6. Keep documentation concise and structured.
-7. Prefer finishing one scoped task before starting another.
+## Default Codex Workflow
 
-## How to use the docs
+- Read `docs/plan.md` first for non-trivial work.
+- If `docs/plan.md` points to a spec, use that spec as the implementation contract.
+- If a task is non-trivial and no spec exists, create or refine one before broad implementation.
+- Update docs when decisions become concrete, and remove stale placeholders or notes.
+- Raise major product or architecture decisions through conversation instead of silently inventing them.
 
-### `docs/product.md`
-Use for:
-- problem statement
-- target users
-- goals and non-goals
-- user-facing outcomes
-- success criteria
+## Harness Engineering Defaults
 
-Do not put implementation details here.
-
-### `docs/engineering.md`
-Use for:
-- architecture boundaries
-- module responsibilities
-- data model or API constraints
-- approved dependencies or tools
-- testing and validation policy
-
-Do not put roadmap or task tracking here.
-
-### `docs/plan.md`
-Use for:
-- current phase
-- ordered tasks
-- task status
-- blockers
-- next action
-
-The agent may update this file as work progresses or as the plan is refined through conversation.
-Keep it brief.
-
-### `docs/specs/*.md`
-Use for feature-level contracts.
-Each spec should define:
-- objective
-- in scope / out of scope
-- functional requirements
-- acceptance criteria
-- test plan
-
-If a task is larger than a small bugfix, prefer creating a feature spec before implementing.
-
-## Conflict handling
-
-If documents conflict:
-- do not guess
-- surface the conflict clearly
-- propose a minimal resolution
-- ask the user to choose when the conflict changes product or architecture intent
-
-## Planning behavior
-
-Before larger edits:
-- identify the active task in `docs/plan.md`
-- identify the relevant spec in `docs/specs/`
-- inspect the existing code and tests
-- propose or perform the smallest useful next step
-
-When appropriate, update `docs/plan.md` to reflect:
-- completed tasks
-- narrowed next steps
-- newly discovered blockers
-
-## Coding workflow
-
-When working in the codebase:
-- prefer `rg` / `rg --files` for search
-- inspect existing code before creating new abstractions
-- avoid unnecessary dependencies
-- avoid broad refactors unless requested or clearly required
-- run relevant tests before concluding work
-- add tests for new behavior when appropriate
-
-## Documentation style
-
-Documentation should be:
-- short
-- explicit
-- scannable
-- easy to revise in conversation
-
-Prefer bullets, checklists, and compact sections over long prose.
-
-## Bootstrap rule
-
-If `docs/product.md`, `docs/engineering.md`, or `docs/plan.md` are only skeletons,
-use them as writable templates and replace placeholders through conversation with the user.
-Do not preserve placeholder text once concrete decisions have been made.
+- Put stable interfaces, shared constraints, environment assumptions, and validation commands in `docs/engineering.md`.
+- Put feature-scoped behavior, acceptance criteria, fixture or test-data needs, and failure cases in the relevant spec.
+- Keep `docs/plan.md` focused on the next work unit: objective, active spec, next step, blockers.
+- Prefer verification that proves the harness works in practice, not just in isolated units.

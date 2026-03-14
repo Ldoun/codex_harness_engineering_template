@@ -1,36 +1,32 @@
 # Product
 
-Status: draft
-
-This is a living document. Replace placeholders through conversation with the user.
-Keep this file concise and product-focused.
+Use this file for durable product intent. Keep only information that should survive beyond the current task.
 
 ## Problem
-- What problem are we solving?
-- Why does it matter?
 
-## Target Users
+- Problem being solved:
+- Why it matters:
+
+## Users
+
 - Primary users:
 - Secondary users:
 
 ## Goals
-- Goal 1:
-- Goal 2:
-- Goal 3:
 
-## Non-Goals
-- Non-goal 1:
-- Non-goal 2:
+- Desired outcomes:
+- Non-goals:
 
-## Core Use Cases
-- Use case 1:
-- Use case 2:
-- Use case 3:
+## Key Workflows
+
+- Workflow 1:
+- Workflow 2:
 
 ## Success Criteria
-- Metric or outcome 1:
-- Metric or outcome 2:
+
+- Signals that the product is working:
+- Measures or outcomes to watch:
 
 ## Open Questions
-- Question 1:
-- Question 2:
+
+- Only unresolved product questions that still affect decisions:

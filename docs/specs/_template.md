@@ -1,50 +1,36 @@
 # Feature Spec
 
-Status: draft
-Feature ID:
-Feature Name:
+Use this file as a scoped working contract for a non-trivial change. Keep it narrow, practical, and tied to current implementation work.
 
-Use this template for non-trivial features. Keep specs narrowly scoped.
-Replace placeholders through conversation with the user.
+Stable architecture and shared constraints belong in `docs/engineering.md`, not here.
 
-## Objective
-- What should this feature accomplish?
+## Summary
 
-## Background
-- Why is this feature needed?
+- Feature or task:
+- Why this change exists:
 
-## In Scope
-- Scope item 1
-- Scope item 2
+## Scope
 
-## Out of Scope
-- Out-of-scope item 1
-- Out-of-scope item 2
+- In scope:
+- Out of scope:
 
-## Functional Requirements
-- FR1:
-- FR2:
-- FR3:
+## Behavior Requirements
 
-## Non-Functional Requirements
-- NFR1:
-- NFR2:
-
-## Implementation Notes
-- Relevant modules:
-- Constraints:
-- Data/API notes:
+- Required behavior:
+- Edge or failure cases:
+- Feature-specific fixture or test-data needs:
 
 ## Acceptance Criteria
-- Criterion 1
-- Criterion 2
-- Criterion 3
+
+- Observable result 1:
+- Observable result 2:
 
 ## Test Plan
-- Unit tests:
-- Integration tests:
-- Manual checks:
+
+- Checks to automate:
+- Manual verification:
+- Commands or environments to use:
 
 ## Open Questions
-- Question 1:
-- Question 2:
+
+- Only unresolved questions that block or materially affect implementation:

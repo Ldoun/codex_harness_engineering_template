@@ -1,2 +1,0 @@
-# codex_harness_engineering_template
-codex_harness_engineering_template

@@ -1,39 +1,35 @@
 # Engineering
 
-Status: draft
+Use this file for durable technical truth. Keep feature-specific behavior in specs.
 
-This is a living document. Replace placeholders through conversation with the user.
-Keep this file concise and implementation-focused.
+## System Boundary
 
-## System Scope
-- What system or repository boundaries matter here?
+- Repository or system boundary:
+- External systems or dependencies touched:
 
-## Stack
-- Language(s):
-- Framework(s):
-- Storage:
-- Tooling:
+## Interfaces and Contracts
 
-## Architecture
-- Major components:
-- Data flow:
-- Key boundaries:
+- Primary interfaces:
+- Input and output contracts:
+- Failure, timeout, or retry expectations:
+
+## Environment and Dependencies
+
+- Languages, frameworks, and tools:
+- Required environment assumptions:
+- Shared dependencies or services:
+
+## Harness Strategy
+
+- Fixture or test-data approach:
+- Observability or debugging expectations:
+- Validation commands:
 
 ## Constraints
-- Constraint 1:
-- Constraint 2:
-- Constraint 3:
 
-## Interfaces and Data
-- Key interfaces:
-- Key data structures:
-- External dependencies:
-
-## Validation
-- Required test types:
-- Commands to run:
-- Definition of done:
+- Technical constraints that shape implementation:
+- Definition of done for engineering work:
 
 ## Open Questions
-- Question 1:
-- Question 2:
+
+- Only unresolved technical questions that still affect implementation:
