@@ -35,7 +35,7 @@ Describe the current repository and the harness it supports in 1-2 lines.
 
 ## Harness Engineering Defaults
 
-- Put stable interfaces, shared constraints, environment assumptions, and validation commands in `docs/engineering.md`.
-- Put feature-scoped behavior, acceptance criteria, fixture or test-data needs, and failure cases in the relevant spec.
+- Put shared interfaces, environment assumptions, and reusable validation commands in `docs/engineering.md`.
+- Put feature-scoped behavior, acceptance criteria, fixture or test-data needs, failure cases, and any TDD exception in the relevant spec.
 - Keep `docs/plan.md` focused on the next work unit: objective, active spec, next step, blockers.
 - Prefer verification that proves the harness works in practice, not just in isolated units.
