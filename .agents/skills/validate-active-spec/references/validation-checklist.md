@@ -1,0 +1,41 @@
+# Validation Checklist
+
+Use this checklist when validating whether the current worktree satisfies the active spec named by `docs/plan.md`.
+
+## Required Inputs
+
+- `AGENTS.md`
+- `docs/plan.md`
+- the active spec named by `docs/plan.md`
+- relevant implementation files from the current worktree
+- relevant validation commands from the active spec or `docs/engineering.md`
+
+## Blockers
+
+- `docs/plan.md` does not name an active spec.
+- The named active spec does not exist.
+- The active spec is `_template.md`.
+- The active spec status or plan linkage makes validation impossible.
+
+If any blocker applies, do not guess. Report the blocker and point to `$doc-consistency-check` when the problem is document linkage rather than code.
+
+## Core Checks
+
+- The changed behavior matches the active spec's behavior requirements.
+- Acceptance criteria are covered by implementation or are clearly unmet.
+- Claimed behavior has relevant tests or other validation evidence.
+- Relevant validation commands pass, or missing execution is reported as missing evidence.
+- The worktree does not include meaningful out-of-scope changes relative to the active spec.
+- The active spec's test plan is reflected in the code changes, tests, or reported validation gaps.
+
+## Verdict Rules
+
+- `satisfied`: requirements are met and validation evidence is sufficient.
+- `partially satisfied`: implementation may align, but tests, commands, or other evidence are missing or incomplete.
+- `not satisfied`: one or more requirements or acceptance criteria are clearly unmet, contradicted, or missing from the implementation.
+
+## Repair Boundaries
+
+- Repair code and tests only when the task context clearly calls for it.
+- Do not rewrite docs or specs in this skill.
+- Surface doc/spec linkage problems separately and point to `$doc-consistency-check`.

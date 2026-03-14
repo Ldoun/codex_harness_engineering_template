@@ -4,7 +4,7 @@ Status: proposed
 
 Valid values: proposed | in progress | complete | removed
 
-Use this file as a scoped working contract for a non-trivial change. Keep it narrow, practical, and tied to current implementation work.
+Use this file as a scoped working contract for a non-trivial change. Keep it narrow, practical, tied to current implementation work, and limited to one coherent behavior change.
 
 Stable architecture and shared constraints belong in `docs/engineering.md`, not here.
 

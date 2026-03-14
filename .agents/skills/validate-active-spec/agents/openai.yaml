@@ -1,0 +1,4 @@
+interface:
+  display_name: "Validate Active Spec"
+  short_description: "Validate code against active spec"
+  default_prompt: "Use $validate-active-spec to check whether the current worktree satisfies the active spec in docs/plan.md."

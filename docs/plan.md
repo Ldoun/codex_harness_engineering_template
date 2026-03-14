@@ -1,6 +1,6 @@
 # Plan
 
-Use this file for the current work horizon only. Remove stale tasks instead of accumulating history.
+Use this file for the current work horizon only. Keep exactly one active spec here and use `docs/spec-index.md` for queued, completed, or removed specs.
 
 ## Objective
 
@@ -10,6 +10,7 @@ Use this file for the current work horizon only. Remove stale tasks instead of a
 
 - Spec path:
 - If no spec is needed, record why:
+- Do not list queued or completed specs here:
 
 ## Next Step
 

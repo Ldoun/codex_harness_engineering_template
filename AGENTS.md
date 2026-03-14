@@ -16,6 +16,7 @@ Describe the current repository and the harness it supports in 1-2 lines.
 - `docs/product.md` stores durable product intent only.
 - `docs/engineering.md` stores durable technical truth only.
 - `docs/plan.md` stores the current execution state only.
+- `docs/spec-index.md` stores the lightweight index of all specs and their lifecycle state.
 - `docs/specs/*.md` store scoped working contracts for non-trivial changes.
 - `docs/specs/_template.md` is the starting point for creating a new spec.
 - Brief references across docs are fine, but keep the full version of a fact in one best-fit place.
@@ -24,7 +25,9 @@ Describe the current repository and the harness it supports in 1-2 lines.
 
 - Read `docs/plan.md` first for non-trivial work.
 - If `docs/plan.md` points to a spec, use that spec as the implementation contract.
-- If a task is non-trivial and no spec exists, create one from `docs/specs/_template.md` before broad implementation.
+- If a task is non-trivial and no spec exists, create one from `docs/specs/_template.md` before broad implementation and register it in `docs/spec-index.md`.
+- One spec should cover one coherent behavior change. Split independently implementable or independently verifiable behavior into separate specs.
+- Keep only one active spec in `docs/plan.md`. Use `docs/spec-index.md` for broader spec visibility instead of listing queued or completed specs in `docs/plan.md`.
 - Update docs when decisions become concrete, and remove stale placeholders or notes.
 - Raise major product or architecture decisions through conversation instead of silently inventing them.
 
