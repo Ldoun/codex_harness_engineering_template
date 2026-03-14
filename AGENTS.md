@@ -2,8 +2,7 @@
 
 ## Repo Purpose
 
-This repository is a compact template for Codex-driven harness engineering projects.
-Use `docs/` as shared working memory that helps the user and Codex stay aligned.
+Describe the current repository and the harness it supports in 1-2 lines.
 
 ## Core Philosophy
 
@@ -18,13 +17,14 @@ Use `docs/` as shared working memory that helps the user and Codex stay aligned.
 - `docs/engineering.md` stores durable technical truth only.
 - `docs/plan.md` stores the current execution state only.
 - `docs/specs/*.md` store scoped working contracts for non-trivial changes.
+- `docs/specs/_template.md` is the starting point for creating a new spec.
 - Brief references across docs are fine, but keep the full version of a fact in one best-fit place.
 
 ## Default Codex Workflow
 
 - Read `docs/plan.md` first for non-trivial work.
 - If `docs/plan.md` points to a spec, use that spec as the implementation contract.
-- If a task is non-trivial and no spec exists, create or refine one before broad implementation.
+- If a task is non-trivial and no spec exists, create one from `docs/specs/_template.md` before broad implementation.
 - Update docs when decisions become concrete, and remove stale placeholders or notes.
 - Raise major product or architecture decisions through conversation instead of silently inventing them.
 
