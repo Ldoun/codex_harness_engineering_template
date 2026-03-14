@@ -1,0 +1,4 @@
+interface:
+  display_name: "Complete Spec and Push"
+  short_description: "Complete, commit, and push a spec"
+  default_prompt: "Use $complete-spec-and-push to validate, close out, commit, and push the active spec on the current branch."
