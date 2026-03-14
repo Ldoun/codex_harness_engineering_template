@@ -16,7 +16,7 @@ Validate the current worktree against the active spec and return a verdict befor
 3. If `docs/plan.md` does not name an active spec, report a blocker and stop instead of guessing.
 4. Read the active spec and any validation guidance in `docs/engineering.md`.
 5. Inspect the current worktree as the default change set: staged and unstaged changes plus the resulting repo state.
-6. Compare the change set to the active spec's scope, behavior requirements, acceptance criteria, and test plan.
+6. Compare the change set to the active spec's scope, behavior requirements, acceptance criteria, and test plan, including any documented TDD exception.
 7. Run relevant validation commands from the active spec or `docs/engineering.md` when they exist and are feasible.
 8. Return a verdict with evidence, missing validation, and concrete gaps tied to the active spec.
 9. Repair clear code or test issues only when the task context calls for it.
@@ -27,9 +27,10 @@ Validate the current worktree against the active spec and return a verdict befor
 - Use the current worktree as the default change set.
 - If there are no worktree changes, report that no default change set was found unless the user explicitly wants the whole checkout validated.
 - Treat missing active spec linkage in `docs/plan.md` as a blocker, not as partial satisfaction.
+- For non-trivial behavior changes, expect relevant automated tests unless the active spec or `docs/engineering.md` explicitly records why TDD was skipped and what equivalent validation replaces it.
 - Distinguish failures from validation gaps:
   - unmet requirement or contradicted acceptance criterion = not satisfied
-  - missing tests or missing evidence = partially satisfied
+  - missing tests, missing evidence, or undocumented TDD exceptions = partially satisfied
   - missing active spec path = blocker
 - If doc or spec linkage is the blocker, point to `$doc-consistency-check` instead of rewriting docs here.
 - Keep repair scope to code and tests only.

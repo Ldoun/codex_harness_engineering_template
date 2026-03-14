@@ -26,6 +26,7 @@ Check the repo's canonical docs for role violations, contradictions, linkage dri
 - If `docs/plan.md` does not name an active spec, record that as a finding and continue with the canonical docs instead of guessing.
 - Treat `docs/plan.md` as the sole source of the active spec and `docs/spec-index.md` as the visibility/index layer for all specs.
 - Treat placeholder or starter text in real project docs as incompleteness, not as a hard contradiction.
+- Treat missing TDD exception rationale for non-trivial behavior as incompleteness when the active spec relies on manual-only or replacement validation.
 - Do not invent missing product or architecture decisions. Surface them as open questions.
 - Prefer small alignment fixes over broad rewrites.
 

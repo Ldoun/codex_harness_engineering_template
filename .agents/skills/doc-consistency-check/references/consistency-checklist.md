@@ -30,8 +30,11 @@ Use this checklist when reviewing `docs/product.md`, `docs/engineering.md`, `doc
 - Product goals or non-goals do not conflict with active spec scope.
 - Product workflows and success criteria still match the current implementation direction.
 - Engineering constraints, interfaces, environment assumptions, and validation commands do not conflict with the active spec.
+- `docs/engineering.md` and the active spec agree on the default TDD expectation for non-trivial behavior changes.
 - Stable architecture has not leaked into the active spec.
 - Feature-scoped behavior has not leaked into `docs/engineering.md`.
+- If the active spec skips TDD for a non-trivial behavior change, the reason and equivalent validation are documented clearly.
+- Manual-only validation for non-trivial behavior is explained rather than assumed.
 - `docs/plan.md` objective, active spec, next step, and blockers describe the same current work unit.
 - `docs/spec-index.md` status matches the corresponding spec file status.
 - The active spec in `docs/plan.md` is present in `docs/spec-index.md` and is not marked `complete` or `removed`.

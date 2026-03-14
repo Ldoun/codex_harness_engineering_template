@@ -24,11 +24,15 @@ Use this file for durable technical truth. Keep feature-specific behavior in spe
 - Fixture or test-data approach:
 - Observability or debugging expectations:
 - Validation commands:
+- Default testing approach for non-trivial behavior changes:
+- When automation is impractical, acceptable replacement validation:
 
 ## Constraints
 
 - Technical constraints that shape implementation:
 - Definition of done for engineering work:
+- Manual verification is supplementary unless automated checks are genuinely impractical.
+- Done means the behavior is implemented, relevant tests or equivalent documented validation exist, and the required validation commands pass.
 
 ## Open Questions
 

@@ -26,6 +26,8 @@ Describe the current repository and the harness it supports in 1-2 lines.
 - Read `docs/plan.md` first for non-trivial work.
 - If `docs/plan.md` points to a spec, use that spec as the implementation contract.
 - If a task is non-trivial and no spec exists, create one from `docs/specs/_template.md` before broad implementation and register it in `docs/spec-index.md`.
+- Prefer test-driven development for non-trivial behavior changes. When practical, write or update the relevant failing test before implementing the behavior.
+- If TDD is skipped, make the reason explicit in the active spec and require equivalent validation evidence before closeout.
 - One spec should cover one coherent behavior change. Split independently implementable or independently verifiable behavior into separate specs.
 - Keep only one active spec in `docs/plan.md`. Use `docs/spec-index.md` for broader spec visibility instead of listing queued or completed specs in `docs/plan.md`.
 - Update docs when decisions become concrete, and remove stale placeholders or notes.

@@ -34,7 +34,7 @@ Validate the active spec, update spec tracking, isolate the active-spec changes,
 - Treat closeout as a task-end workflow, not as an automatic response to any `complete` status value.
 - Use `docs/plan.md` as the source of the single active spec.
 - Use `docs/spec-index.md` as lifecycle visibility, not as the source of active state.
-- Do not push when validation is partial or failed.
+- Do not push when validation is partial or failed, including when required TDD evidence or a documented TDD exception is missing.
 - Do not push when the active spec is `_template.md`.
 - Do not bundle unrelated code or unrelated docs into the closeout commit.
 - Keep repair scope limited to active-spec code, tests, and tracking docs needed for closeout.

@@ -18,6 +18,7 @@ Use this checklist when finishing the active spec, committing the active-spec ch
 - The active spec is `_template.md`.
 - The active spec is not complete and is not ready to be marked complete.
 - `$validate-active-spec` does not return `satisfied`.
+- The active spec lacks required TDD evidence or a documented TDD exception, causing `$validate-active-spec` to remain below `satisfied`.
 - Plan, spec, and spec-index linkage is inconsistent and cannot be repaired cleanly.
 - Active-spec changes cannot be isolated safely from unrelated worktree changes.
 

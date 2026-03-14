@@ -31,9 +31,11 @@ Stable architecture and shared constraints belong in `docs/engineering.md`, not 
 
 ## Test Plan
 
-- Checks to automate:
-- Manual verification:
+- Tests to add or update before implementation:
+- Expected failing coverage before implementation, when practical:
+- Manual verification, if still needed:
 - Commands or environments to use:
+- If TDD is skipped, reason and equivalent validation:
 
 ## Open Questions
 

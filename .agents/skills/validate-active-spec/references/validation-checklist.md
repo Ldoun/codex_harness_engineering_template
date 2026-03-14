@@ -23,15 +23,17 @@ If any blocker applies, do not guess. Report the blocker and point to `$doc-cons
 
 - The changed behavior matches the active spec's behavior requirements.
 - Acceptance criteria are covered by implementation or are clearly unmet.
-- Claimed behavior has relevant tests or other validation evidence.
+- For non-trivial behavior changes, claimed behavior has relevant automated tests unless a TDD exception is explicitly documented.
+- If TDD is skipped, the active spec or `docs/engineering.md` records the reason and the equivalent validation evidence required instead.
+- Claimed behavior has the required tests or the documented replacement validation evidence.
 - Relevant validation commands pass, or missing execution is reported as missing evidence.
 - The worktree does not include meaningful out-of-scope changes relative to the active spec.
 - The active spec's test plan is reflected in the code changes, tests, or reported validation gaps.
 
 ## Verdict Rules
 
-- `satisfied`: requirements are met and validation evidence is sufficient.
-- `partially satisfied`: implementation may align, but tests, commands, or other evidence are missing or incomplete.
+- `satisfied`: requirements are met, TDD expectations are met or explicitly waived, and validation evidence is sufficient.
+- `partially satisfied`: implementation may align, but tests, commands, TDD exception rationale, or other evidence are missing or incomplete.
 - `not satisfied`: one or more requirements or acceptance criteria are clearly unmet, contradicted, or missing from the implementation.
 
 ## Repair Boundaries
