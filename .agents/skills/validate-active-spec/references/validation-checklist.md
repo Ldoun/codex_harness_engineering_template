@@ -27,6 +27,7 @@ If any blocker applies, do not guess. Report the blocker and point to `$doc-cons
 - If TDD is skipped, the active spec or `docs/engineering.md` records the reason and the equivalent validation evidence required instead.
 - Claimed behavior has the required tests or the documented replacement validation evidence.
 - Relevant validation commands pass, or missing execution is reported as missing evidence.
+- If the current validation is being used to support spec closeout, at least one relevant validation pass has succeeded without fixture-backed or other mock discovery/source inputs.
 - The worktree does not include meaningful out-of-scope changes relative to the active spec.
 - The active spec's test plan is reflected in the code changes, tests, or reported validation gaps.
 

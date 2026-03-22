@@ -1,4 +1,4 @@
 interface:
   display_name: "Complete Spec and Push"
-  short_description: "Complete, commit, and push a spec"
-  default_prompt: "Use $complete-spec-and-push to validate, close out, commit, and push the active spec on the current branch."
+  short_description: "Close out the active spec and split unrelated commits when safe"
+  default_prompt: "Use $complete-spec-and-push to wrap up, validate, close out, commit, and push the active spec on the current branch, and to place unrelated work in separate commits when that can be done safely."

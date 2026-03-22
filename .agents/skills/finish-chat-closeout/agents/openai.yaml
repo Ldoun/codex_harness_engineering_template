@@ -1,0 +1,4 @@
+interface:
+  display_name: "Finish Chat Closeout"
+  short_description: "Run repo closeout when work is done"
+  default_prompt: "Use $finish-chat-closeout to run $doc-consistency-check, $validate-active-spec, and $complete-spec-and-push when implementation is complete, including state-based closeout cases where docs/plan.md shows closeout is next even if the user only says proceed or says nothing else."
