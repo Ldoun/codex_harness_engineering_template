@@ -16,6 +16,7 @@ Use this checklist when finishing the active spec, committing the active-spec ch
 - `docs/plan.md` does not name exactly one active spec.
 - The active spec does not exist.
 - The active spec is `_template.md`.
+- The active spec declares `Execution Mode: iterative-improvement` and `Loop Status` is not `ready-for-final-validation` or `complete`.
 - The active spec is not complete and is not ready to be marked complete.
 - `$validate-active-spec` does not return `satisfied`.
 - The active spec lacks required TDD evidence or a documented TDD exception, causing `$validate-active-spec` to remain below `satisfied`.

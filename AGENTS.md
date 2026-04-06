@@ -33,6 +33,16 @@ Describe the current repository and the harness it supports in 1-2 lines.
 - Update docs when decisions become concrete, and remove stale placeholders or notes.
 - Raise major product or architecture decisions through conversation instead of silently inventing them.
 
+## Opt-in Iterative Refinement Mode
+
+- Never enter a scored or multi-iteration refinement loop unless the user explicitly invokes `$iterative-refinement-loop`, explicitly asks to run an iterative refinement loop, or explicitly asks to continue an already-active iterative loop.
+- Routine implementation, bug fixes, and ordinary feature work must stay on the default workflow.
+- Use iterative refinement mode for broad goals that need repeated planning against evidence, such as refining a mobile web UI, reworking UX flow quality, or improving a broader product surface rather than fixing one narrow defect.
+- In iterative refinement mode, keep `docs/plan.md` lean: objective, active spec, next step, blockers only.
+- Store rubric criteria, hard gates, artifact paths, iteration budget, scores, hypotheses, and iteration history in the active iterative spec instead of `docs/plan.md`.
+- Implement one milestone-sized hypothesis per iteration, then run the evaluation contract before planning the next pass.
+- Do not treat an iterative spec as ready for normal closeout until it sets `Loop Status: ready-for-final-validation`.
+
 ## Harness Engineering Defaults
 
 - Put shared interfaces, environment assumptions, and reusable validation commands in `docs/engineering.md`.

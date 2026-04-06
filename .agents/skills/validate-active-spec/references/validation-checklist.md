@@ -16,6 +16,7 @@ Use this checklist when validating whether the current worktree satisfies the ac
 - The named active spec does not exist.
 - The active spec is `_template.md`.
 - The active spec status or plan linkage makes validation impossible.
+- The active spec is in iterative mode and the caller is trying to use auto-validation as final closeout before `Loop Status: ready-for-final-validation`.
 
 If any blocker applies, do not guess. Report the blocker and point to `$doc-consistency-check` when the problem is document linkage rather than code.
 
@@ -28,6 +29,7 @@ If any blocker applies, do not guess. Report the blocker and point to `$doc-cons
 - Claimed behavior has the required tests or the documented replacement validation evidence.
 - Relevant validation commands pass, or missing execution is reported as missing evidence.
 - If the current validation is being used to support spec closeout, at least one relevant validation pass has succeeded without fixture-backed or other mock discovery/source inputs.
+- For iterative-improvement specs, distinguish a mid-loop checkpoint from final closeout validation. Only treat it as closeout-ready when `Loop Status: ready-for-final-validation`.
 - The worktree does not include meaningful out-of-scope changes relative to the active spec.
 - The active spec's test plan is reflected in the code changes, tests, or reported validation gaps.
 

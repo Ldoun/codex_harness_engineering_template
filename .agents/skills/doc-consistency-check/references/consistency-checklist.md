@@ -7,6 +7,7 @@ Use this checklist when reviewing `docs/product.md`, `docs/engineering.md`, `doc
 - `docs/product.md`: durable product intent
 - `docs/engineering.md`: durable technical truth
 - `docs/plan.md`: current execution state
+- In iterative-improvement mode, `docs/plan.md` stays a pointer while the active spec carries rubric details, artifacts, and iteration history
 - `docs/spec-index.md`: lightweight visibility and lifecycle index for all specs
 - active spec: scoped working contract for the current non-trivial change
 
@@ -41,6 +42,7 @@ Use this checklist when reviewing `docs/product.md`, `docs/engineering.md`, `doc
 - `docs/spec-index.md` does not imply multiple active specs.
 - A `complete` or `removed` spec is not still named as active in `docs/plan.md`.
 - `docs/plan.md` does not contain roadmap or task-journal content.
+- If the active spec uses iterative-improvement mode, iteration history and scorekeeping live in the spec rather than `docs/plan.md`.
 - Real project docs do not still rely on unresolved template placeholders.
 
 ## Repair Boundaries

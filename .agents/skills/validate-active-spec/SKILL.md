@@ -36,6 +36,8 @@ Use this skill not only when the user explicitly says `$validate-active-spec`, b
 
 Automatically trigger this skill when the implementation phase appears to be ending and the next step is validation or closeout, unless a material user decision is still needed before validation would be meaningful.
 
+If the active spec declares `Execution Mode: iterative-improvement` and `Loop Status` is not `ready-for-final-validation`, do not auto-trigger this skill from end-of-implementation heuristics. In that case, run only when the user explicitly asks for validation or when `$iterative-refinement-loop` is handing the work off for final validation.
+
 Do not wait for explicit user wording if:
 
 - code changes for the active spec have been made
@@ -56,6 +58,7 @@ Do wait if:
 - Treat missing active spec linkage in `docs/plan.md` as a blocker, not as partial satisfaction.
 - For non-trivial behavior changes, expect relevant automated tests unless the active spec or `docs/engineering.md` explicitly records why TDD was skipped and what equivalent validation replaces it.
 - If the active spec is about to be removed from `docs/plan.md` as part of closeout, require a passing non-mock validation run for the relevant workflow; fixture-only evidence is not enough.
+- For iterative-improvement specs, treat `Loop Status: ready-for-final-validation` as the signal that validation may support closeout. Before that point, an explicit validation request should be reported as a loop checkpoint rather than as final closeout evidence.
 - Distinguish failures from validation gaps:
   - unmet requirement or contradicted acceptance criterion = not satisfied
   - missing tests, missing evidence, missing non-mock closeout validation, or undocumented TDD exceptions = partially satisfied

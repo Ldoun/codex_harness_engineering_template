@@ -29,6 +29,7 @@ Do not treat this as permission to auto-push during normal implementation. The c
 6. Require:
    - the active spec is complete or ready to be marked complete
    - validation is `satisfied`
+   - if the active spec declares `Execution Mode: iterative-improvement`, its `Loop Status` is `ready-for-final-validation` or the spec is already complete
    - if the active spec will be removed from `docs/plan.md`, at least one relevant non-mock validation pass has succeeded with fixture discovery/source inputs disabled
    - plan, spec, and spec-index linkage is consistent
 7. Update tracking docs before commit:
@@ -50,6 +51,7 @@ Do not treat this as permission to auto-push during normal implementation. The c
 - Do not push when validation is partial or failed, including when required TDD evidence or a documented TDD exception is missing.
 - Do not remove the active spec from `docs/plan.md` or push the closeout commit on fixture-only validation evidence.
 - Do not push when the active spec is `_template.md`.
+- Do not close out an iterative-improvement spec while `Loop Status` is still `idle`, `running`, or `blocked`.
 - Do not bundle unrelated code or unrelated docs into the active-spec closeout commit.
 - Unrelated changes may be pushed only in separate commits with their own clear scope and sufficient validation evidence for that scope.
 - Prefer one logical group per unrelated commit; do not sweep all leftovers into a generic cleanup commit.

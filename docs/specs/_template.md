@@ -1,12 +1,9 @@
 # Feature Spec
 
 Status: proposed
-
 Valid values: proposed | in progress | complete | removed
-
-Use this file as a scoped working contract for a non-trivial change. Keep it narrow, practical, tied to current implementation work, and limited to one coherent behavior change.
-
-Stable architecture and shared constraints belong in `docs/engineering.md`, not here.
+Use this file as a scoped working contract for a non-trivial change. Keep it narrow, practical, tied to current implementation work, and limited to one coherent behavior change. Stable architecture and shared constraints belong in `docs/engineering.md`, not here.
+Use `docs/specs/_iterative-template.md` instead when the goal is a broad, eval-driven refinement loop rather than one bounded behavior change.
 
 ## Summary
 

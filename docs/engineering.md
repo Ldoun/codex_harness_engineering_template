@@ -26,6 +26,9 @@ Use this file for durable technical truth. Keep feature-specific behavior in spe
 - Validation commands:
 - Default testing approach for non-trivial behavior changes:
 - When automation is impractical, acceptable replacement validation:
+- For iterative refinement specs, define the eval contract in the active spec with hard gates, rubric criteria, artifact commands, artifact locations, and an iteration budget.
+- Prefer artifact directories under `artifacts/loops/<spec-slug>/iter-<n>/` for screenshots, traces, and score files produced by a refinement loop.
+- Keep baseline or current-best references in the active iterative spec rather than `docs/plan.md`.
 
 ## Constraints
 

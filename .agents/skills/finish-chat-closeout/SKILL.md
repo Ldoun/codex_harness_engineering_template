@@ -29,6 +29,7 @@ Use this as a wrapper skill when the task is ending and the repo should go throu
 - Use the repo's active spec from `docs/plan.md`. If there is no active spec, stop and report the blocker.
 - Prefer repo state over phrasing. If `docs/plan.md` says the next step is closeout, treat a bare `Proceed` or `Continue` as a closeout trigger.
 - Do not require the user to say `finish` explicitly once Codex has already moved the work into a closeout-ready state.
+- If the active spec declares `Execution Mode: iterative-improvement` and `Loop Status` is not `ready-for-final-validation`, stop and report that the refinement loop is still in progress rather than trying to close it out.
 - If the current turn completes implementation and validation and leaves `docs/plan.md` in a closeout state, run this skill before sending the final response unless the user explicitly asked not to commit or not to push.
 - Respect the stop conditions from the underlying skills. If any step says the work is blocked, do not continue to the next one.
 - Keep the final closeout response explicit about the status: doc consistency result, validation verdict, and whether push happened.

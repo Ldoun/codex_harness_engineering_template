@@ -1,0 +1,7 @@
+interface:
+  display_name: "Iterative Refinement Loop"
+  short_description: "Opt-in scored loop for broad product or UI refinement"
+  default_prompt: "Use $iterative-refinement-loop to run an explicit multi-iteration refinement loop for broad goals such as refining a mobile web UI or improving a wider product surface."
+
+policy:
+  allow_implicit_invocation: false
