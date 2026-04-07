@@ -1,18 +1,16 @@
 # Consistency Checklist
 
-Use this checklist when reviewing `docs/product.md`, `docs/engineering.md`, `docs/plan.md`, `docs/spec-index.md` when present, and the active spec referenced by `docs/plan.md`.
+Use this checklist when reviewing `docs/product.md`, `docs/engineering.md`, `docs/ux.md`, `docs/plan.md`, `docs/spec-index.md` when present, and the active spec referenced by `docs/plan.md`.
 
 ## Document Contract
-
 - `docs/product.md`: durable product intent
 - `docs/engineering.md`: durable technical truth
+- `docs/ux.md`: durable UX, interaction, accessibility, and visual-system truth
 - `docs/plan.md`: current execution state
-- In iterative-improvement mode, `docs/plan.md` stays a pointer while the active spec carries rubric details, artifacts, and iteration history
 - `docs/spec-index.md`: lightweight visibility and lifecycle index for all specs
 - active spec: scoped working contract for the current non-trivial change
 
 ## Review Targets
-
 - Read `AGENTS.md` first to confirm the repo's document roles.
 - Read the active spec path from `docs/plan.md`.
 - Read `docs/spec-index.md` when it exists.
@@ -20,20 +18,22 @@ Use this checklist when reviewing `docs/product.md`, `docs/engineering.md`, `doc
 - If no active spec is named, record that as a finding and continue.
 
 ## Issue Classes
-
 - Role violations: content lives in the wrong document.
 - Contradictions: two docs disagree on the same fact or expectation.
 - Linkage drift: plan objective, active spec, and next step do not point at the same work.
 - Incompleteness: unresolved placeholder text or starter text remains in real project docs.
+- Missing visual-input linkage: UI work lacks a visual source of truth, artifact path, or validation contract.
 
 ## Checks
-
 - Product goals or non-goals do not conflict with active spec scope.
 - Product workflows and success criteria still match the current implementation direction.
-- Engineering constraints, interfaces, environment assumptions, and validation commands do not conflict with the active spec.
+- UX principles, design-system contracts, and accessibility expectations do not conflict with the active spec's visual requirements.
+- Engineering constraints, interfaces, environment assumptions, visual artifact conventions, and validation commands do not conflict with the active spec.
 - `docs/engineering.md` and the active spec agree on the default TDD expectation for non-trivial behavior changes.
 - Stable architecture has not leaked into the active spec.
 - Feature-scoped behavior has not leaked into `docs/engineering.md`.
+- Durable UX rules have not leaked into a feature spec when they belong in `docs/ux.md`.
+- If the active spec changes UI, it records visual inputs or explicitly says that no visual input is needed.
 - If the active spec skips TDD for a non-trivial behavior change, the reason and equivalent validation are documented clearly.
 - Manual-only validation for non-trivial behavior is explained rather than assumed.
 - `docs/plan.md` objective, active spec, next step, and blockers describe the same current work unit.
@@ -42,11 +42,9 @@ Use this checklist when reviewing `docs/product.md`, `docs/engineering.md`, `doc
 - `docs/spec-index.md` does not imply multiple active specs.
 - A `complete` or `removed` spec is not still named as active in `docs/plan.md`.
 - `docs/plan.md` does not contain roadmap or task-journal content.
-- If the active spec uses iterative-improvement mode, iteration history and scorekeeping live in the spec rather than `docs/plan.md`.
 - Real project docs do not still rely on unresolved template placeholders.
 
 ## Repair Boundaries
-
 - Fix clear alignment issues directly when the task context calls for repair.
-- Surface missing product or architecture decisions instead of inventing them.
+- Surface missing product, UX, or architecture decisions instead of inventing them.
 - Prefer the smallest useful edit that restores consistency.

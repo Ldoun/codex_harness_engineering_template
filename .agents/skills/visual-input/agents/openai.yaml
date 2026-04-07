@@ -1,0 +1,14 @@
+interface:
+  display_name: "Visual Input"
+  short_description: "Capture screenshots, design context, and a normalized visual manifest"
+  default_prompt: "Use $visual-input to capture and normalize screenshots, Figma context, Storybook routes, or existing screens before reference-driven UI work."
+policy:
+  allow_implicit_invocation: true
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "browser"
+      description: "Browser automation for screenshots and route inspection"
+    - type: "mcp"
+      value: "figma"
+      description: "Figma context and screenshot capture for exact selections"

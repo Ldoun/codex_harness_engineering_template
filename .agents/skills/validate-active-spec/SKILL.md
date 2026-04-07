@@ -6,26 +6,24 @@ description: Validate whether the current worktree satisfies the active spec ref
 # Validate Active Spec
 
 ## Overview
-
-Validate the current worktree against the active spec and return a verdict before making any repairs. Use this skill to check implementation coverage, missing validation, and out-of-scope changes relative to the active spec.
+Validate the current worktree against the active spec and return a verdict before making any repairs.
+Use this skill to check implementation coverage, missing validation, and out-of-scope changes relative to the active spec.
 
 ## Workflow
-
 1. Read `AGENTS.md` to learn the repo workflow and document roles.
 2. Read `docs/plan.md` and identify the active spec path.
 3. If `docs/plan.md` does not name an active spec, report a blocker and stop instead of guessing.
-4. Read the active spec and any validation guidance in `docs/engineering.md`.
+4. Read the active spec and any validation guidance in `docs/engineering.md` and `docs/ux.md`.
 5. Inspect the current worktree as the default change set: staged and unstaged changes plus the resulting repo state.
-6. Compare the change set to the active spec's scope, behavior requirements, acceptance criteria, and test plan, including any documented TDD exception.
+6. Compare the change set to the active spec's scope, behavior requirements, acceptance criteria, UX or visual requirements, and test plan, including any documented TDD exception.
 7. Run relevant validation commands from the active spec or `docs/engineering.md` when they exist and are feasible.
-8. If the validation is being used to support closeout or removal of the active spec from `docs/plan.md`, require evidence that at least one relevant validation pass succeeded with fixture-backed or other mock discovery/source inputs disabled.
-9. Return a verdict with evidence, missing validation, and concrete gaps tied to the active spec.
-10. Repair clear code or test issues only when the task context calls for it.
+8. If the active spec declares visual inputs or changed UI, require evidence that the implemented UI was compared against the visual-input manifest or equivalent named reference at the required breakpoints and relevant states.
+9. If the validation is being used to support closeout or removal of the active spec from `docs/plan.md`, require evidence that at least one relevant validation pass succeeded with fixture-backed or other mock discovery or source inputs disabled.
+10. Return a verdict with evidence, missing validation, and concrete gaps tied to the active spec.
+11. Repair clear code or test issues only when the task context calls for it.
 
 ## Trigger Guidance
-
 Use this skill not only when the user explicitly says `$validate-active-spec`, but also when they ask things like:
-
 - "Does this satisfy the spec?"
 - "Are we done?"
 - "Is this ready to push?"
@@ -39,35 +37,33 @@ Automatically trigger this skill when the implementation phase appears to be end
 If the active spec declares `Execution Mode: iterative-improvement` and `Loop Status` is not `ready-for-final-validation`, do not auto-trigger this skill from end-of-implementation heuristics. In that case, run only when the user explicitly asks for validation or when `$iterative-refinement-loop` is handing the work off for final validation.
 
 Do not wait for explicit user wording if:
-
 - code changes for the active spec have been made
 - implementation or repair work has concluded for the turn
 - relevant validation can be run without further product or technical decisions
 
 Do wait if:
-
 - the user is still choosing between approaches
 - a blocking product or architecture decision is unresolved
 - implementation is only partially complete and the current turn is clearly still in the build phase
 
 ## Validation Rules
-
 - Treat the active spec as the implementation contract.
 - Use the current worktree as the default change set.
 - If there are no worktree changes, report that no default change set was found unless the user explicitly wants the whole checkout validated.
 - Treat missing active spec linkage in `docs/plan.md` as a blocker, not as partial satisfaction.
 - For non-trivial behavior changes, expect relevant automated tests unless the active spec or `docs/engineering.md` explicitly records why TDD was skipped and what equivalent validation replaces it.
+- If TDD is skipped, the active spec or `docs/engineering.md` records the reason and the equivalent validation evidence required instead.
 - If the active spec is about to be removed from `docs/plan.md` as part of closeout, require a passing non-mock validation run for the relevant workflow; fixture-only evidence is not enough.
+- If the active spec declares visual inputs, missing visual evidence yields `partially satisfied` unless an acceptance criterion is visibly unmet, which yields `not satisfied`.
 - For iterative-improvement specs, treat `Loop Status: ready-for-final-validation` as the signal that validation may support closeout. Before that point, an explicit validation request should be reported as a loop checkpoint rather than as final closeout evidence.
 - Distinguish failures from validation gaps:
-  - unmet requirement or contradicted acceptance criterion = not satisfied
-  - missing tests, missing evidence, missing non-mock closeout validation, or undocumented TDD exceptions = partially satisfied
+  - unmet requirement or contradicted acceptance criterion = `not satisfied`
+  - missing tests, missing evidence, missing visual validation, missing non-mock closeout validation, or undocumented TDD exceptions = `partially satisfied`
   - missing active spec path = blocker
 - If doc or spec linkage is the blocker, point to `$doc-consistency-check` instead of rewriting docs here.
 - Keep repair scope to code and tests only.
 
 ## Output
-
 - Start with one verdict: `satisfied`, `partially satisfied`, or `not satisfied`.
 - Support the verdict with:
   - evidence from the code and worktree
@@ -77,5 +73,4 @@ Do wait if:
 - For active implementation or closeout work, briefly state the verdict and then repair clear code or test issues when the path forward is clear.
 
 ## Reference
-
 Read `references/validation-checklist.md` for the detailed validation checklist and failure classification.

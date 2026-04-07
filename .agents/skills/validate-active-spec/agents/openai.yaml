@@ -1,7 +1,6 @@
 interface:
   display_name: "Validate Active Spec"
   short_description: "Check if active spec work is complete"
-  default_prompt: "Use $validate-active-spec to verify whether the current worktree satisfies the active spec, especially when implementation appears complete or before closeout, push, or ship decisions."
-
+  default_prompt: "Use $validate-active-spec to verify whether the current worktree satisfies the active spec, including required visual evidence when the spec changes UI."
 policy:
   allow_implicit_invocation: true

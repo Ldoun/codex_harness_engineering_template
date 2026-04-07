@@ -10,3 +10,5 @@ Each script should ideally emit:
 - hard-gate command results
 - artifact output paths
 - a structured score file that the iterative spec can reference
+
+For UI loops, scripts may also consume visual-input artifacts or produce screenshot-comparison outputs referenced by the active spec.
